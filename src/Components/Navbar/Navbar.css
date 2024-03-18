@@ -1,0 +1,146 @@
+:root {
+  --primaryColor: #3ab3a7;
+  --primaryHover: #0c988a;
+  --secondaryColor: #059789;
+  --secHoverColor: #253b53;
+  --grayColor: #f7f7f7;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem;
+  background: var(--primaryColor);
+  z-index: 2000;
+}
+.header .logoDiv .logo {
+  color: var(--grayColor);
+  font-weight: 600;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .header .menueDiv {
+    background-color: var(--primaryColor);
+    position: absolute;
+    height: -moz-max-content;
+    height: max-content;
+    width: 80%;
+    border-radius: 10px;
+    padding: 1rem;
+    top: -700%;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0 2px 4px rgba(243, 243, 243, 0.904);
+    transition: 0.3s ease;
+    z-index: 3000;
+  }
+  .header .menueDiv .menueLists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin: auto;
+    padding: 1rem 0;
+  }
+  .header .menueDiv .menueLists .navItem {
+    padding: 1rem 0;
+  }
+  .header .menueDiv .menueLists .navItem .menueLink {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .header .menueDiv .menueLists .navItem .menueLink:hover {
+    color: var(--secHoverColor);
+  }
+  .header .menueDiv .closeNavbar {
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+  }
+  .header .menueDiv .closeNavbar .icon {
+    font-size: 25px;
+  }
+  .header .menueDiv .closeNavbar:hover .icon {
+    color: var(--secHoverColor);
+  }
+  .header .activeNavbar {
+    top: 6rem;
+  }
+  .header .socialIcons {
+    display: none;
+  }
+}
+.header .toggleNavbar {
+  color: var(--grayColor);
+  font-size: 25px;
+}
+.header .toggleNavbar:hover .icon {
+  color: var(--secHoverColor);
+}
+
+@media screen and (min-width: 769px) {
+  .menueDiv .menueLists {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0.5rem;
+  }
+  .menueDiv .menueLists .navItem {
+    padding: 0 0.5rem;
+  }
+  .menueDiv .menueLists .navItem .menueLink {
+    color: white;
+    font-size: 14px;
+  }
+  .menueDiv .menueLists .navItem .menueLink:hover {
+    color: var(--secHoverColor);
+  }
+  .closeNavbar, .toggleNavbar {
+    display: none;
+  }
+  .socialIcons {
+    gap: 0.5rem;
+  }
+  .socialIcons .credlyIcon {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .socialIcons .credlyIcon:hover {
+    color: var(--secHoverColor);
+  }
+  .socialIcons .icon {
+    color: white;
+    font-size: 18px;
+  }
+  .socialIcons .icon:hover {
+    color: var(--secHoverColor);
+  }
+}
+@media screen and (min-width: 1240px) {
+  .header {
+    padding: 1.5rem 15rem;
+  }
+  .header .menueLists {
+    padding: 0 1rem;
+  }
+  .header .menueLists .navItem {
+    padding: 0 1rem;
+  }
+  .header .menueLists .navItem .menueLink {
+    color: white;
+    font-size: 16px;
+  }
+  .header .socialIcons .icon {
+    font-size: 22px;
+  }
+  .header .socialIcons .icon:hover {
+    color: var(--secHoverColor);
+  }
+}/*# sourceMappingURL=Navbar.css.map */
